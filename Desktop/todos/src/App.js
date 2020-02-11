@@ -1,13 +1,11 @@
 import React from "react";
 import logo from "./logo.svg";
-import "./App.css";
-import Todos from "./component/Todos";
+import "./App.css"
+import Todos from
 
 function App() {
-  return;
-  <div>
-    <Todos />
-  </div>;
+  return 
+  <div></div>;
 }
 
 export default App;
