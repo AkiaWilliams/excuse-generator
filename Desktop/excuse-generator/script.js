@@ -1,25 +1,30 @@
 window.onload = () => {
-  const who = ["the dog", "my granma", "his turtle", "my bird"];
-  const what = ["eat", "pissed", "crushed", "broked"];
-  const when = [
-    "before the class",
-    "right in time",
-    "when I finished",
-    "during my lunch",
-    "while I was praying"
-  ];
-  const randomNumber1 = Math.floor(Math.random() * who.length);
-  console.log(who[randomNumber1]);
-  const randomNumber2 = Math.floor(Math.random() * what.length);
-  console.log(what[randomNumber2]);
-  const randomNumber3 = Math.floor(Math.random() * when.length);
-  console.log(when[randomNumber3]);
-  this.document.getElementById("excuse").innerHTML = "Hello world";
-  this.console.log(Math.floor(Math.random() * 5));
-  this.console.log(who.length);
-  this.console.log(what.length);
-  this.console.log(when.length);
-  this.console.log(who[3]);
-  this.console.log(what[3]);
-  this.console.log(when[5]);
+  document.querySelector("#btn").addEventListener("click", () => {
+    document.querySelector("#the-excuse").innerHTML = generateExcuse();
+  });
+};
+
+let generateExcuse = () => {
+  const pronoun = ["A", "The"];
+  const subject = ["jogger", "raccon", "dog", "driver", "comedian", "pincone"];
+  const action = ["took my", "threw my", "yelled at my", "stole my", "bit my"];
+  const possetion = ["homework", "laptop", "car", "shoe"];
+  const where = ["on the street", "in my driveway", "in my driveway"];
+
+  const proIndex = Math.floor(Math.random() * pronoun.length);
+  const subIndex = Math.floor(Math.random() * subject.length);
+  const actionIndex = Math.floor(Math.random() * action.length);
+  const possetionIndex = Math.floor(Math.random() * possetion.length);
+  const whereIndex = Math.floor(Math.random() * where.length);
+  return (
+    pronoun[proIndex] +
+    "" +
+    subject[subIndex] +
+    "" +
+    action[actionIndex] +
+    "" +
+    possetion[possetionIndex] +
+    "" +
+    where[whereIndex]
+  );
 };
